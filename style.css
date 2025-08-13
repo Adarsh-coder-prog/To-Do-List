@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #11998e, #38ef7d);
+}
+
+.container {
+    border: none;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    width: 95%;
+    max-width: 400px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.header {
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 2em;
+    border-bottom: 2px solid white;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.addTask {
+    display: flex;
+    gap: 10px;
+    padding: 0 0 10px 0;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    font-size: 1em;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+}
+
+input::placeholder {
+    color: #a09e9e;
+    font-size: 1em;
+    font-weight: normal;
+    text-align: left;
+    opacity: 1;
+}
+
+#inputTask:hover {
+    background-color: black;
+    color: white;
+    box-shadow: 1px 1px 20px;
+}
+
+button {
+    background-color: #b7e7db;
+    color: #333;
+    border: none;
+    font-size: 1.5em;
+    padding: 8px 8px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button:hover {
+    background-color: #38ef7d;
+    color: white;
+    box-shadow: 1px 1px 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.taskList li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  /* Put text left, buttons right */
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 8px 16px;
+    margin-bottom: 10px;
+    background-color: white;
+    width: 100%;
+    word-break: break-word;
+    gap: 14px;
+}
+
+.taskList li span {
+    flex: 1;
+    font-size: 1em;
+    font-weight: 400;
+    color: #333;
+}
+
+/* Style the delete button inside li */
+.taskList li button {
+    border: none;
+    background: transparent;
+    color: #333;
+    font-size: 1.2em;
+    padding: 4px 8px;
+    border-radius: 50%;
+    margin: 0;
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, color 0.2s;
+}
+
+/* Icon hover effect */
+.taskList li button:hover i {
+    color: #38ef7d;
+    transform: scale(1.2);
+}
+
+.taskList li button:active {
+    background: #f6ffed;
+}
+
+.taskList li i {
+    pointer-events: none;
+    transition: color 0.3s, transform 0.2s;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        max-width: 98vw;
+        padding: 10px;
+    }
+    .header {
+        font-size: 1.3em;
+        margin-bottom: 12px;
+    }
+    .addTask {
+        gap: 6px;
+        padding: 0 0 6px 0;
+    }
+    input {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+    .taskList li {
+        padding: 8px 10px;
+        font-size: 0.98em;
+        gap: 10px;
+    }
+    button {
+        font-size: 1em;
+        padding: 6px 8px;
+        border-radius: 18px;
+    }
+}
